@@ -1,12 +1,9 @@
-import Head from 'next/head'
 import Link from 'next/link'
-import { server } from '../config'
 import styled from 'styled-components'
 import { data } from '../data'
 import Image from 'next/image'
 import Clientele from '../components/Clientele'
 import { Rerousel } from 'rerousel';
-import { useRef } from 'react'
 import { keyframes } from 'styled-components'
 const lineAnimation = keyframes`
     0% { width:0; opacity:0.1; }
@@ -130,7 +127,7 @@ export default function Home({ articles }) {
             <h2>CONTACT US</h2>
           </Header>
           <ContactBox>
-            <Link href='/contact'>
+            <Link href="/contact">
               REACH OUT TO US
             </Link>
           </ContactBox>
