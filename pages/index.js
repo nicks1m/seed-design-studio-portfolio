@@ -4,6 +4,7 @@ import { data } from '../data'
 import Image from 'next/image'
 import Clientele from '../components/Clientele'
 import { Rerousel } from 'rerousel';
+import { device } from '../device'
 import { keyframes } from 'styled-components'
 const lineAnimation = keyframes`
     0% { width:0; opacity:0.1; }
@@ -28,13 +29,19 @@ p{
   text-transform:uppercase;
   font-size:5rem;
   transition:0.5s;
-  &:hover{
-  color:white;
-  cursor:crosshair;
-  -webkit-text-stroke-width: 4px;
-  -webkit-text-stroke-color: black;
+    &:hover{
+    color:white;
+    cursor:crosshair;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: black;
+   }
 }
 
+@media ${device.tablet}{
+  p {
+    font-size:4rem;
+  }
+}
 `
 
 const ImageBox = styled.div`
@@ -42,19 +49,40 @@ margin-bottom:15px;
 span{
   font-size:3rem;
 }
+
+@media ${device.tablet}{
+  span{
+    font-size:1.5rem
+  };
+}
 `
 const ContentBox = styled.div`
 border-top:1px solid black;
 display:flex;
-font-size:5rem;
+font-size:10vh;
 margin-top:50px;
+
+@media ${device.tablet}{
+  flex-direction:column;
+  justify-content:center;
+  h2{
+    margin-bottom:0;
+    font-size:4rem;
+  }
 `
 const ClientList = styled.div`
 display:flex;
 flex-wrap:wrap;
 width:50%;
 padding:2rem;
+
+@media ${device.tablet}{
+  width:100%;
+  justify-content:space-between;
+  padding:0;
+
 `
+
 const Header = styled.div`
 width:50%;
 align-content:start;
@@ -86,6 +114,10 @@ a {
     right:auto;
   }
 }
+
+@media ${device.tablet}{
+  padding:0;
+}
 `
 
 
@@ -97,15 +129,15 @@ export default function Home({ articles }) {
           <p>We are a specialist creative studio focusing on bringing conceptual ideas to life.
             Our work is centered around fashion, music, design
             and the arts. We love to challenge norms and be subversive in a creative way.
-            We`&apos;`re passionate about challenging the
+            We&apos;re passionate about challenging the
             conventional. We truly believe in not settling for
-            ordinary. We`&apos;`re the antidote to common. We will not settle for less.
+            ordinary. We&apos;re the antidote to common. We will not settle for less.
           </p>
         </ServicesBox>
         <ImageBox>
           <Rerousel >
-            {data.images.map((item,index) => {
-              return <Image layout="intrinsic" key={index} src={item}  />
+            {data.images.map((item, index) => {
+              return <Image layout="intrinsic" key={index} src={item} />
             })}
           </Rerousel>
           <span>Samizdat FW19 MENSWEAR - COSMIC TERROR</span>
@@ -117,7 +149,7 @@ export default function Home({ articles }) {
             </h2>
           </Header>
           <ClientList>
-            {data.clients.map((c,index) => {
+            {data.clients.map((c, index) => {
               return <Clientele key={index} c={c} />
             })}
           </ClientList>

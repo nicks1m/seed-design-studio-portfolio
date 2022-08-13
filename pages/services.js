@@ -1,5 +1,5 @@
-import React from 'react';
 import styled from 'styled-components'
+import { device } from '../device'
 
 const Container = styled.div`
 display:flex;
@@ -10,6 +10,10 @@ min-height:100vh;
 `
 const Header = styled.div`
 font-size:4rem;
+
+@media ${device.tablet}{
+    font-size:3rem;
+}
 `
 const ContentBox = styled.div`
 display:flex;
@@ -32,7 +36,9 @@ p{
     -webkit-text-stroke-width: 4px;
     -webkit-text-stroke-color: black;
   }
-  
+  @media ${device.tablet}{
+    font-size:4rem;
+  }
 `
 const Info = styled.div`
 display:flex;
@@ -61,6 +67,12 @@ span{
         cursor:crosshair;
     }
 }
+
+@media ${device.tablet}{
+    span{
+        font-size:1.5rem;
+    }
+  }
 `
 const services = () => {
     return (

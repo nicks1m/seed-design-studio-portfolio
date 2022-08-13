@@ -23,6 +23,7 @@ font-weight:300;
 margin-top:0;
 margin-bottom:0;
 color:black;
+
 `
 const Wrapper = styled.div`
 position:relative;

@@ -1,11 +1,15 @@
-import React from 'react';
 import styled from 'styled-components'
+import { device } from '../device'
 
 const Container = styled.div`
 min-height:100vh;
 `
 const Header = styled.div`
 font-size:4rem;
+
+@media ${device.tablet}{
+    font-size:3rem;
+}
 `
 
 const ContactBox = styled.div`
@@ -35,6 +39,10 @@ span{
     &:hover{
         cursor:crosshair;
     }
+}
+
+@media ${device.tablet}{
+    font-size:1rem;
 }
 `
 

@@ -1,5 +1,5 @@
-import Head from 'next/head'
 import styled from 'styled-components'
+import { device } from '../device';
 
 const Container = styled.div`
 border-top:1px solid black;
@@ -17,7 +17,10 @@ color:white;
 cursor:crosshair;
 -webkit-text-stroke-width: 4px;
 -webkit-text-stroke-color: black;
-
+}
+@media ${device.tablet}{
+      margin-bottom:0;
+      font-size:4rem;
 `
 
 const about = () => {
