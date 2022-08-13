@@ -94,12 +94,12 @@ export default function Home({ articles }) {
     <div>
       <Container>
         <ServicesBox>
-          <p>We are a specialist creative studio focusing on bringing conceptual ideas to life.
+          <p>{`We are a specialist creative studio focusing on bringing conceptual ideas to life.
             Our work is centered around fashion, music, design
             and the arts. We love to challenge norms and be subversive in a creative way.
             We're passionate about challenging the
             conventional. We truly believe in not settling for
-            ordinary. We're the antidote to common. We will not settle for less.
+            ordinary. We're the antidote to common. We will not settle for less.`}
           </p>
         </ServicesBox>
         <ImageBox>
