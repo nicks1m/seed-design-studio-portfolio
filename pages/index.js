@@ -95,13 +95,6 @@ a {
 export default function Home({ articles }) {
   return (
     <div>
-      <Head>
-        <title>SEED. Design Studio</title>
-        <meta name="keywords" content='Design Agency' />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300&display=swap" rel="stylesheet" />
-      </Head>
       <Container>
         <ServicesBox>
           <p>We are a specialist creative studio focusing on bringing conceptual ideas to life.
@@ -114,8 +107,8 @@ export default function Home({ articles }) {
         </ServicesBox>
         <ImageBox>
           <Rerousel >
-            {data.images.map(i => {
-              return <Image layout="intrinsic" src={i}  />
+            {data.images.map((item,index) => {
+              return <Image layout="intrinsic" key={index} src={item}  />
             })}
           </Rerousel>
           <span>Samizdat FW19 MENSWEAR - COSMIC TERROR</span>
@@ -127,8 +120,8 @@ export default function Home({ articles }) {
             </h2>
           </Header>
           <ClientList>
-            {data.clients.map(c => {
-              return <Clientele c={c} />
+            {data.clients.map((c,index) => {
+              return <Clientele key={index} c={c} />
             })}
           </ClientList>
         </ContentBox>

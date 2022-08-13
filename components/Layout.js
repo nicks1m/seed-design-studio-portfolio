@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
                 <title>SEED. Design Studio</title>
                 <meta name="keywords" content='Design Agency' />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
                 <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300&display=swap" rel="stylesheet" />
             </Head>
             <Nav />
